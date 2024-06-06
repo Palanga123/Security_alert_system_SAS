@@ -1,0 +1,14 @@
+*{
+    font-family: montserrat;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+#map{
+    background-image: url({% static "images/1712099.jpg" %});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

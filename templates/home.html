@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+{% block content %}
+    <main class="w-3/5 mx-auto mt-20">
+        
+        <div id="regInfo" class="tab">
+            <div class="border border-gray-300 rounded-md m-auto bg-white shdow-md overflow-hidden">
+                <div class="border-b border-gray-300 px-10 py-6">
+                    <p class="font-semibold text-2xl text-gray-600">User Registration Form</p>
+                    <p class="text-sm text-gray-500">Register users to give them access to the secure system</p>
+                </div>
+                <div class="p-10">
+                    <form action="#" method="post">
+                        <div class="flex justify-between py-4">
+                            <div>
+                                <p class="text-[15px] text-slate-600">First name</p>
+                                <input type="text" placeholder="First Name" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="fname">
+                            </div>
+                            
+                            <div>
+                                <p class="text-[15px] text-slate-600">Last name</p>
+                                <input type="text" placeholder="Last Name" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="lname">
+                            </div>
+                        </div>
+                        <div class="flex justify-between py-4">
+                            <div>
+                                <p class="text-[15px] text-slate-600">Phone number</p>
+                                <input type="text" placeholder="Phone number" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="fname">
+                            </div>
+                            
+                            <div>
+                                <p class="text-[15px] text-slate-600">Email address</p>
+                                <input type="email" placeholder="Email address" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="lname">
+                            </div>
+                        </div>             
+                        <div class="flex justify-between py-4">
+                            <div>
+                                <p class="text-[15px] text-slate-600">NRC number</p>
+                                <input type="text" placeholder="NRC number" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="fname">
+                            </div>
+                            
+                            <div>
+                                <p class="text-[15px] text-slate-600">Email address</p>
+                                <input type="text" placeholder="Email address" class="bg-gray-200 text-sm h-10 pl-4 w-80 rounded border border-gray-300" name="lname">
+                            </div>
+                        </div>    
+                                        
+                        <div class="text-right">
+                            <button class="my-4 py-2 px-4 font-semibold rounded bg-green-600 text-white" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        tab = document.getElementById("reg")
+        tab.classList.add("bg-sky-200")
+    </script>
+{% endblock %}
+

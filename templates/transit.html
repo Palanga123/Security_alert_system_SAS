@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}On Transit{% endblock %}
+{% block content %}
+    <main class="w-3/5 mx-auto mt-5">       
+        
+
+        <div id="transitInfo">
+            <div class="grid grid-cols-3 gap-4 cursor-pointer" onclick="toggle(user, user_1)" id="user_1">                
+                <div class="rounded-md border border-gray-300 flex w-[300px] items-center p-4">
+                    <div class="h-20 w-20 bg-sky-500 rounded-full mx-1"></div>
+                    <div class="h-10 ml-2">
+                        <p class="font-bold text-slate-700">John Doe</p>
+                        <p class="text-sm font-semibold">To Kitwe</p>
+                    </div>                    
+                </div>
+            </div>
+
+            <div id="user" class="my-4 rounded-md border border-gray-400 hidden">
+                <div>
+                    <div class="p-4 bg-gray-300 font-bold text-gray-700 flex justify-between">
+                        <div>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="h-6 w-6 bg-white rounded-full">
+                            <button class="h-6 w-6 bg-white rounded-full"><button>
+                        </div>
+                    </div>
+                    <div class="p-4 flex justify-between">
+                        <button id="mapbtn" class="py-3 px-6 rounded-md bg-sky-600 text-white" onclick="maps()">Map</button> <button id="notbtn" class="py-3 px-6 rounded-md bg-sky-600 text-white" onclick="alert()">Alerts</button>
+                    </div>
+                    <div class="w-full h-96">
+                        <div id="map" class="h-full w-full"></div>
+                        <div id="not" class="rounde border-y border-gray-300 overflow-hidden hidden">
+                            <div class="bg-gray-300 py-4 px-4 font-semibold">
+                                Alerts
+                            </div>
+                            <div class="text-sm">
+                                <div class="px-4 py-2 border-b flex cursor-pointer">
+                                    <div class="text-sm text-blue-400">12:03</div>
+                                    <div class="px-4">Trunk Opened by <span>John Doe</span></div>
+                                </div>
+                                <div class="px-4 py-2 border-b flex cursor-pointer">
+                                    <div class="text-sm text-blue-400">12:06</div>
+                                    <div class="px-4">Attempt to open trunk <span></span></div>    
+                                </div>
+                                <div class="px-4 py-2 border-b flex cursor-pointer">
+                                    <div class="text-sm text-blue-400">12:09</div>
+                                    <div class="px-4">Trunk heading back <span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+    </main>
+    <script>
+        not = document.getElementById("not")
+        map = document.getElementById("map")
+        notbtn = document.getElementById("notbtn")
+        mapbtn = document.getElementById("mapbtn")
+
+
+        tab = document.getElementById("transit")
+        tab.classList.add("bg-sky-200")
+
+        function alert(){
+            if(map.classList.contains("hidden")){
+                val = 0
+            }
+    
+            if(not.classList.contains("hidden")){
+                not.classList.remove("hidden")
+                map.classList.add("hidden")
+            }
+        }
+    
+        function maps(){
+            if(not.classList.contains("hidden")){
+                val = 0
+            }
+    
+            if(map.classList.contains("hidden")){
+                map.classList.remove("hidden")
+                not.classList.add("hidden")
+            }
+        }
+    
+        mapbtn.onclick = maps
+        notbtn.onclick = alert
+    </script>
+{% endblock %}

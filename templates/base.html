@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/196d1be94d.js" crossorigin="anonymous"></script>
+    <script src="{% static "css/css.js" %}"></script>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body class="flex g-gray-100">
+    
+    <nav class="w-[250px] rounded-md fixed h-full bg-white border border-gray-300">
+
+        <div>
+            <p class="py-10 px-10 mb-5 text-gray-700 font-bold text-lg border-b border-gray-300 text-slate-800">
+                Secure Alert System - (SAS)
+            </p>
+        </div>
+        
+        <div class="px-2">
+            <p class="w-full flex items-center text-gray-800 rounded-md hover:bg-sky-100 links" id="reg">
+                <a href="/home" class="block py-3 px-10 w-full">
+                    <button class="w-10 text-slate-600">
+                        <i class="fa-solid fa-clipboard px-2"></i>
+                    </button>
+                    
+                    Registration
+                </a>
+            </p>
+            <p class="w-full flex items-center text-gray-800 rounded-md hover:bg-sky-100 links" id="not">
+                <a href="/notifications/" class="block py-3 px-10 w-full">
+                    <button class="w-10 text-slate-600">
+                        <i class="fa-solid fa-bell p"></i>
+                    </button>
+                    Notifications    
+                </a>
+            </p>
+            <p class="w-full flex items-center text-gray-800 rounded-md hover:bg-sky-100 links flex" id="transit">
+                <a href="/transit/" class="block py-3 px-10 w-full">
+                    <button class="w-10 text-slate-600">
+                        <i class="fa-solid fa-truck px-2"></i>
+                    </button>
+                    On Transit
+                </a>
+            </p>
+            <p class="w-full rounded-md text-gray-800 hover:bg-sky-100 links" id="credit">
+                <a href="/credit/" class="block py-3 px-10 w-full">
+                    <button class="w-10 text-slate-600">
+                        <i class="fa-solid fa-users-line px-2"></i>
+                    </button>
+                    Credits
+                </a>
+            </p>
+            <p class="w-full rounded-md">
+                <a href="/" class="flex text-gray-800 block py-3 px-10 w-full">
+                    <button class="w-10 text-slate-600">
+                        <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>
+                    </button>
+                    Logout
+                </a>
+            </p>
+            
+        </div>
+    </nav>
+    <div class="w-1/5"></div>
+    {% block content%}
+    {% endblock %}
+    
+</body>
+</html>
+<style>
+    *{
+        font-family: montserrat;
+    }
+    
+    body{
+        background-color: whitesmoke;
+    }
+    
+    #map{
+        background-image: url({% static "images/1712099.jpg" %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<script src="{% static "js/main.js" %}"></script>
+

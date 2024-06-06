@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Notifications{% endblock %}
+{% block content %}
+    <main class="w-3/5 mx-auto mt-20">
+        
+        <div id="notInfo" class="tab">
+            <div class="rounded-md border border-gray-300 overflow-hidden">
+                <div class="bg-gray-300 py-4 px-4 font-semibold">
+                    Alerts
+                </div>
+                <div class="text-sm">
+                    <div class="px-4 py-2 border-b flex cursor-pointer">
+                        <div class="text-sm text-blue-400">12:03</div>
+                        <div class="px-4">Trunk Opened by <span>John Doe</span></div>
+                    </div>
+                    <div class="px-4 py-2 border-b flex cursor-pointer">
+                        <div class="text-sm text-blue-400">12:06</div>
+                        <div class="px-4">Attempt to open trunk <span></span></div>    
+                    </div>
+                    <div class="px-4 py-2 border-b flex cursor-pointer">
+                        <div class="text-sm text-blue-400">12:09</div>
+                        <div class="px-4">Trunk heading back <span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    <script>
+        tab = document.getElementById("not")
+        tab.classList.add("bg-sky-200")
+    </script>
+{% endblock %}
