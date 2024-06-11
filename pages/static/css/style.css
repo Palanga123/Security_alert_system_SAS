@@ -2,9 +2,6 @@
     font-family: montserrat;
 }
 
-body{
-    background-color: whitesmoke;
-}
 
 #map{
     background-image: url({% static "images/1712099.jpg" %});
