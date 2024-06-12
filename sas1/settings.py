@@ -80,7 +80,7 @@ WSGI_APPLICATION = "sas1.wsgi.application"
 DATABASES = {
     "default": dj_database_url.config(
         # Replace this vale with your local database's connection string.
-        default = 'postgresql://postgres:postgres@localhost:5432/mysite',
+        default = 'postgresql://postgres:postgres@localhost:8000/sas1',
         conn_max_age = 600
     )
 }
