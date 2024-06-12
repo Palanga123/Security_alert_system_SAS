@@ -1,0 +1,11 @@
+*{
+    font-family: montserrat;
+}
+
+
+#map{
+    background-image: url({% static "images/1712099.jpg" %});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
