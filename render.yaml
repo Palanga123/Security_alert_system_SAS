@@ -1,8 +1,8 @@
 databases:
-  - name: mysitedb
+  - name: sas1db
     plan: free
-    databaseName: mysite
-    user: mysite
+    databaseName: sas1
+    user: sas1
 
 services:
   - type: web
